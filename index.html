@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plain-English software reviews for plumbers, roofers, mechanics, landscapers and other working businesses. No tech jargon. No fluff." />
+  <title>Desk Work Dan | Plain-English Software Reviews for Working Businesses</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            steel: {
+              50: '#f5f7fa', 100: '#e4e9f0', 200: '#cbd4e0', 300: '#a4b3c7',
+              400: '#768aa6', 500: '#566c8b', 600: '#445672', 700: '#38465d',
+              800: '#2f3a4d', 900: '#1d2433', 950: '#11151f'
+            },
+            signal: {
+              50: '#fff7ed', 100: '#ffedd5', 500: '#f97316',
+              600: '#ea580c', 700: '#c2410c', 800: '#9a3412'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+            display: ['"Roboto Slab"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Roboto Slab', Georgia, serif; }
+  </style>
+</head>
+
+<body class="bg-white text-steel-900 antialiased">
+
+  <!-- Top affiliate disclosure strip -->
+  <div class="bg-steel-900 text-steel-100 text-xs sm:text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-center">
+      Some links on this site are affiliate links. If you buy through them, we may earn a small commission &mdash; at no extra cost to you.
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="border-b border-steel-200 bg-white sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <span class="inline-flex items-center justify-center h-9 w-9 rounded-md bg-steel-900 text-signal-500 font-display font-bold">D</span>
+        <span class="font-display font-bold text-lg sm:text-xl tracking-tight">Desk Work Dan</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="text-steel-900 hover:text-signal-600">Home</a>
+        <a href="#reviews" class="text-steel-700 hover:text-signal-600">Reviews</a>
+        <a href="#comparisons" class="text-steel-700 hover:text-signal-600">Comparisons</a>
+        <a href="about.html" class="text-steel-700 hover:text-signal-600">About The Mechanic</a>
+      </nav>
+
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-steel-300 text-steel-700 hover:bg-steel-50" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg id="iconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg id="iconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileNav" class="hidden md:hidden border-t border-steel-200 bg-white">
+      <nav class="px-4 py-3 flex flex-col gap-1 text-base font-medium">
+        <a href="index.html" class="py-2 text-steel-900">Home</a>
+        <a href="#reviews" class="py-2 text-steel-700">Reviews</a>
+        <a href="#comparisons" class="py-2 text-steel-700">Comparisons</a>
+        <a href="about.html" class="py-2 text-steel-700">About The Mechanic</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-steel-50 to-white border-b border-steel-200">
+    <div class="max-w-6xl mx-auto px-4 py-14 sm:py-20 lg:py-24">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-signal-700 bg-signal-50 border border-signal-100 px-3 py-1 rounded-full">
+          <span class="h-1.5 w-1.5 rounded-full bg-signal-600"></span>
+          For working businesses
+        </span>
+        <h1 class="mt-4 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight text-steel-900">
+          Find the Right Tools for the Job. <span class="text-signal-600">No Tech Jargon.</span>
+        </h1>
+        <p class="mt-5 text-lg sm:text-xl text-steel-700 leading-relaxed">
+          Honest, plain-English reviews of the software running today's plumbers, roofers, mechanics, landscapers and main street shops. We test it. We tell you straight. You decide.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#reviews" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-signal-600 hover:bg-signal-700 text-white font-semibold shadow-sm transition">
+            See the latest reviews
+            <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+          <a href="about.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md border-2 border-steel-300 hover:border-steel-900 text-steel-900 font-semibold transition">
+            How we review
+          </a>
+        </div>
+
+        <!-- Trust bar -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm">
+          <div>
+            <div class="font-display font-bold text-2xl text-steel-900">120+</div>
+            <div class="text-steel-600">tools tested</div>
+          </div>
+          <div>
+            <div class="font-display font-bold text-2xl text-steel-900">0</div>
+            <div class="text-steel-600">tech buzzwords</div>
+          </div>
+          <div>
+            <div class="font-display font-bold text-2xl text-steel-900">$0</div>
+            <div class="text-steel-600">to read every review</div>
+          </div>
+          <div>
+            <div class="font-display font-bold text-2xl text-steel-900">15+ yrs</div>
+            <div class="text-steel-600">in the trades</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we cover -->
+  <section class="py-12 sm:py-16 border-b border-steel-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-8">
+        <div>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-steel-900">What We Cover</h2>
+          <p class="text-steel-600 mt-1">The everyday office work, minus the headache.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <a href="#reviews" class="group p-4 rounded-lg border border-steel-200 hover:border-steel-900 hover:bg-steel-50 transition">
+          <div class="h-10 w-10 rounded-md bg-steel-900 text-signal-500 flex items-center justify-center mb-3">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="font-semibold text-steel-900">Scheduling</div>
+          <div class="text-xs text-steel-600 mt-0.5">Jobs, crews, calendars</div>
+        </a>
+        <a href="#reviews" class="group p-4 rounded-lg border border-steel-200 hover:border-steel-900 hover:bg-steel-50 transition">
+          <div class="h-10 w-10 rounded-md bg-steel-900 text-signal-500 flex items-center justify-center mb-3">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          </div>
+          <div class="font-semibold text-steel-900">Invoicing</div>
+          <div class="text-xs text-steel-600 mt-0.5">Get paid faster</div>
+        </a>
+        <a href="#reviews" class="group p-4 rounded-lg border border-steel-200 hover:border-steel-900 hover:bg-steel-50 transition">
+          <div class="h-10 w-10 rounded-md bg-steel-900 text-signal-500 flex items-center justify-center mb-3">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="font-semibold text-steel-900">Customer Lists</div>
+          <div class="text-xs text-steel-600 mt-0.5">Keep track of jobs</div>
+        </a>
+        <a href="#reviews" class="group p-4 rounded-lg border border-steel-200 hover:border-steel-900 hover:bg-steel-50 transition">
+          <div class="h-10 w-10 rounded-md bg-steel-900 text-signal-500 flex items-center justify-center mb-3">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="font-semibold text-steel-900">Phones &amp; Texting</div>
+          <div class="text-xs text-steel-600 mt-0.5">Talk to customers</div>
+        </a>
+        <a href="#reviews" class="group p-4 rounded-lg border border-steel-200 hover:border-steel-900 hover:bg-steel-50 transition">
+          <div class="h-10 w-10 rounded-md bg-steel-900 text-signal-500 flex items-center justify-center mb-3">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="font-semibold text-steel-900">Payroll</div>
+          <div class="text-xs text-steel-600 mt-0.5">Pay your crew right</div>
+        </a>
+        <a href="#reviews" class="group p-4 rounded-lg border border-steel-200 hover:border-steel-900 hover:bg-steel-50 transition">
+          <div class="h-10 w-10 rounded-md bg-steel-900 text-signal-500 flex items-center justify-center mb-3">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-3V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a1 1 0 0 0-1-1z"/></svg>
+          </div>
+          <div class="font-semibold text-steel-900">Bookkeeping</div>
+          <div class="text-xs text-steel-600 mt-0.5">Books in plain sight</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Reviews -->
+  <section id="reviews" class="py-14 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
+        <div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-steel-900">Latest Software Reviews</h2>
+          <p class="text-steel-600 mt-2 max-w-2xl">Real reviews from somebody who has actually used the stuff. We tell you what works, what's a waste of money, and what's worth a closer look.</p>
+        </div>
+        <a href="#" class="hidden sm:inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+          See all reviews
+          <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+        <article class="group flex flex-col bg-white rounded-lg border border-steel-200 hover:border-steel-900 transition overflow-hidden">
+          <a href="review.html" class="block aspect-[16/10] bg-steel-100 relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#1d2433"/>
+              <rect x="0" y="0" width="400" height="250" fill="url(#grid1)"/>
+              <defs>
+                <pattern id="grid1" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#2f3a4d" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <g transform="translate(200,125)" fill="#f97316">
+                <rect x="-50" y="-30" width="100" height="60" rx="6" opacity="0.15"/>
+                <rect x="-40" y="-20" width="80" height="6" rx="2"/>
+                <rect x="-40" y="-8" width="60" height="6" rx="2"/>
+                <rect x="-40" y="4" width="70" height="6" rx="2"/>
+                <rect x="-40" y="16" width="40" height="6" rx="2"/>
+              </g>
+            </svg>
+            <span class="absolute top-3 left-3 text-xs font-semibold uppercase tracking-wide bg-white text-steel-900 px-2 py-1 rounded">Scheduling</span>
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="text-xs text-steel-500 font-medium">Aug 12, 2026 &middot; 8 min read</div>
+            <h3 class="mt-2 font-display font-bold text-xl text-steel-900 leading-snug">
+              <a href="review.html" class="hover:text-signal-600">Jobber Review: Worth the Money for a 3-Truck Plumbing Shop?</a>
+            </h3>
+            <p class="mt-2 text-steel-700 text-sm leading-relaxed flex-1">After 90 days of running it on real jobs, here's the straight talk on what Jobber does well, where it falls short, and who shouldn't bother.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-steel-900">
+                <span class="text-signal-600">&#9733;&#9733;&#9733;&#9733;</span><span class="text-steel-300">&#9733;</span>
+                <span class="ml-1">4.2/5</span>
+              </span>
+              <a href="review.html" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+                Read Review
+                <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="group flex flex-col bg-white rounded-lg border border-steel-200 hover:border-steel-900 transition overflow-hidden">
+          <a href="review.html" class="block aspect-[16/10] bg-steel-100 relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#38465d"/>
+              <g transform="translate(200,125)" fill="#fff7ed" opacity="0.92">
+                <circle r="56" fill="#1d2433"/>
+                <text x="0" y="10" text-anchor="middle" font-family="Roboto Slab, serif" font-size="42" font-weight="800" fill="#f97316">$</text>
+              </g>
+            </svg>
+            <span class="absolute top-3 left-3 text-xs font-semibold uppercase tracking-wide bg-white text-steel-900 px-2 py-1 rounded">Invoicing</span>
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="text-xs text-steel-500 font-medium">Aug 4, 2026 &middot; 6 min read</div>
+            <h3 class="mt-2 font-display font-bold text-xl text-steel-900 leading-snug">
+              <a href="review.html" class="hover:text-signal-600">QuickBooks vs. FreshBooks: Which One Won't Drive You Nuts?</a>
+            </h3>
+            <p class="mt-2 text-steel-700 text-sm leading-relaxed flex-1">Both promise easy invoicing. Only one actually delivers if you're billing 30+ customers a month. We put a year of receipts through each.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-steel-900">
+                <span class="text-signal-600">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="ml-1">4.6/5</span>
+              </span>
+              <a href="review.html" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+                Read Review
+                <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="group flex flex-col bg-white rounded-lg border border-steel-200 hover:border-steel-900 transition overflow-hidden">
+          <a href="review.html" class="block aspect-[16/10] bg-steel-100 relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#2f3a4d"/>
+              <g transform="translate(200,125)" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round">
+                <path d="M-60 30 L-20 -20 L20 20 L60 -30"/>
+                <circle cx="-60" cy="30" r="6" fill="#f97316"/>
+                <circle cx="-20" cy="-20" r="6" fill="#f97316"/>
+                <circle cx="20" cy="20" r="6" fill="#f97316"/>
+                <circle cx="60" cy="-30" r="6" fill="#f97316"/>
+              </g>
+            </svg>
+            <span class="absolute top-3 left-3 text-xs font-semibold uppercase tracking-wide bg-white text-steel-900 px-2 py-1 rounded">Field Service</span>
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="text-xs text-steel-500 font-medium">Jul 28, 2026 &middot; 11 min read</div>
+            <h3 class="mt-2 font-display font-bold text-xl text-steel-900 leading-snug">
+              <a href="review.html" class="hover:text-signal-600">Housecall Pro: The Honest Review After One Full Season</a>
+            </h3>
+            <p class="mt-2 text-steel-700 text-sm leading-relaxed flex-1">A roofer with a 5-man crew used it from spring through fall. Here's exactly what's worth paying for and what we wish we'd known.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-steel-900">
+                <span class="text-signal-600">&#9733;&#9733;&#9733;&#9733;</span><span class="text-steel-300">&#9733;</span>
+                <span class="ml-1">4.0/5</span>
+              </span>
+              <a href="review.html" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+                Read Review
+                <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="group flex flex-col bg-white rounded-lg border border-steel-200 hover:border-steel-900 transition overflow-hidden">
+          <a href="review.html" class="block aspect-[16/10] bg-steel-100 relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#1d2433"/>
+              <g transform="translate(200,125)" fill="#f97316">
+                <rect x="-70" y="-15" width="140" height="40" rx="4" fill="#2f3a4d"/>
+                <circle cx="-50" cy="5" r="10" fill="#f97316"/>
+                <rect x="-30" y="-2" width="80" height="6" rx="2"/>
+                <rect x="-30" y="10" width="50" height="6" rx="2"/>
+                <rect x="-70" y="35" width="140" height="2" fill="#566c8b"/>
+              </g>
+            </svg>
+            <span class="absolute top-3 left-3 text-xs font-semibold uppercase tracking-wide bg-white text-steel-900 px-2 py-1 rounded">Customer Lists</span>
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="text-xs text-steel-500 font-medium">Jul 15, 2026 &middot; 7 min read</div>
+            <h3 class="mt-2 font-display font-bold text-xl text-steel-900 leading-snug">
+              <a href="review.html" class="hover:text-signal-600">A Customer List That Won't Lose Your Old Regulars</a>
+            </h3>
+            <p class="mt-2 text-steel-700 text-sm leading-relaxed flex-1">If a 60-year-old shop owner can use it without calling his nephew, it makes our list. Five tools that pass the test.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-steel-900">
+                <span class="text-signal-600">&#9733;&#9733;&#9733;&#9733;</span><span class="text-steel-300">&#9733;</span>
+                <span class="ml-1">4.3/5</span>
+              </span>
+              <a href="review.html" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+                Read Review
+                <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="group flex flex-col bg-white rounded-lg border border-steel-200 hover:border-steel-900 transition overflow-hidden">
+          <a href="review.html" class="block aspect-[16/10] bg-steel-100 relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#445672"/>
+              <g transform="translate(200,125)">
+                <rect x="-55" y="-35" width="110" height="70" rx="10" fill="#1d2433"/>
+                <rect x="-45" y="-25" width="90" height="50" rx="4" fill="#11151f"/>
+                <circle cx="0" cy="40" r="6" fill="#f97316"/>
+              </g>
+            </svg>
+            <span class="absolute top-3 left-3 text-xs font-semibold uppercase tracking-wide bg-white text-steel-900 px-2 py-1 rounded">Phones &amp; Texting</span>
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="text-xs text-steel-500 font-medium">Jul 2, 2026 &middot; 9 min read</div>
+            <h3 class="mt-2 font-display font-bold text-xl text-steel-900 leading-snug">
+              <a href="review.html" class="hover:text-signal-600">OpenPhone vs. Google Voice for the Two-Truck Shop</a>
+            </h3>
+            <p class="mt-2 text-steel-700 text-sm leading-relaxed flex-1">A separate business number that actually rings the right person. We tested both for three months on real customer calls.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-steel-900">
+                <span class="text-signal-600">&#9733;&#9733;&#9733;&#9733;</span><span class="text-steel-300">&#9733;</span>
+                <span class="ml-1">4.4/5</span>
+              </span>
+              <a href="review.html" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+                Read Review
+                <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="group flex flex-col bg-white rounded-lg border border-steel-200 hover:border-steel-900 transition overflow-hidden">
+          <a href="review.html" class="block aspect-[16/10] bg-steel-100 relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#11151f"/>
+              <g transform="translate(200,125)" stroke="#f97316" stroke-width="5" fill="none">
+                <circle r="48"/>
+                <line x1="0" y1="0" x2="0" y2="-30" stroke-linecap="round"/>
+                <line x1="0" y1="0" x2="22" y2="14" stroke-linecap="round"/>
+              </g>
+            </svg>
+            <span class="absolute top-3 left-3 text-xs font-semibold uppercase tracking-wide bg-white text-steel-900 px-2 py-1 rounded">Payroll</span>
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="text-xs text-steel-500 font-medium">Jun 20, 2026 &middot; 10 min read</div>
+            <h3 class="mt-2 font-display font-bold text-xl text-steel-900 leading-snug">
+              <a href="review.html" class="hover:text-signal-600">Gusto Payroll Review: For Crews of 1 to 10</a>
+            </h3>
+            <p class="mt-2 text-steel-700 text-sm leading-relaxed flex-1">Direct deposit, taxes filed, contractor 1099s. Six months in, here's what we'd tell our brother before he signs up.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-steel-900">
+                <span class="text-signal-600">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="ml-1">4.7/5</span>
+              </span>
+              <a href="review.html" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+                Read Review
+                <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-8 sm:hidden">
+        <a href="#" class="inline-flex items-center text-sm font-semibold text-steel-900 hover:text-signal-600">
+          See all reviews
+          <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparisons callout -->
+  <section id="comparisons" class="bg-steel-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-14 sm:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-signal-500 bg-steel-800 border border-steel-700 px-3 py-1 rounded-full">Side-by-side</span>
+          <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl">Two Tools, One Honest Answer.</h2>
+          <p class="mt-4 text-steel-200 text-lg leading-relaxed">Stop reading ten blog posts. Our comparisons line up the two most popular options for your trade and tell you which one to pick &mdash; and why.</p>
+          <a href="#reviews" class="mt-6 inline-flex items-center justify-center px-6 py-3 rounded-md bg-signal-500 hover:bg-signal-600 text-steel-950 font-semibold transition">
+            Browse all comparisons
+            <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="grid gap-3">
+          <a href="review.html" class="flex items-center justify-between bg-steel-800 hover:bg-steel-700 border border-steel-700 px-5 py-4 rounded-lg transition">
+            <div>
+              <div class="font-display font-bold text-lg">Jobber vs. Housecall Pro</div>
+              <div class="text-sm text-steel-300 mt-0.5">For service trades with crews</div>
+            </div>
+            <svg class="h-5 w-5 text-signal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+          <a href="review.html" class="flex items-center justify-between bg-steel-800 hover:bg-steel-700 border border-steel-700 px-5 py-4 rounded-lg transition">
+            <div>
+              <div class="font-display font-bold text-lg">QuickBooks vs. FreshBooks</div>
+              <div class="text-sm text-steel-300 mt-0.5">Bookkeeping showdown</div>
+            </div>
+            <svg class="h-5 w-5 text-signal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+          <a href="review.html" class="flex items-center justify-between bg-steel-800 hover:bg-steel-700 border border-steel-700 px-5 py-4 rounded-lg transition">
+            <div>
+              <div class="font-display font-bold text-lg">Square vs. Stripe Reader</div>
+              <div class="text-sm text-steel-300 mt-0.5">Taking cards on the truck</div>
+            </div>
+            <svg class="h-5 w-5 text-signal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+          <a href="review.html" class="flex items-center justify-between bg-steel-800 hover:bg-steel-700 border border-steel-700 px-5 py-4 rounded-lg transition">
+            <div>
+              <div class="font-display font-bold text-lg">Gusto vs. ADP RUN</div>
+              <div class="text-sm text-steel-300 mt-0.5">Payroll for small crews</div>
+            </div>
+            <svg class="h-5 w-5 text-signal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How we test -->
+  <section class="py-14 sm:py-20 bg-steel-50 border-t border-steel-200">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-steel-900">How a Review Gets Made Around Here</h2>
+      <p class="mt-3 text-steel-700 text-lg">No paid placements. No "10 best" lists from people who never opened the app.</p>
+
+      <div class="mt-10 grid sm:grid-cols-3 gap-6 text-left">
+        <div class="bg-white p-6 rounded-lg border border-steel-200">
+          <div class="font-display font-bold text-2xl text-signal-600">01</div>
+          <div class="mt-2 font-display font-bold text-lg text-steel-900">We pay for it.</div>
+          <p class="mt-2 text-steel-700 text-sm">Out of pocket, with our own card, just like you would.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border border-steel-200">
+          <div class="font-display font-bold text-2xl text-signal-600">02</div>
+          <div class="mt-2 font-display font-bold text-lg text-steel-900">We use it on real jobs.</div>
+          <p class="mt-2 text-steel-700 text-sm">For at least 30 days. Not a 5-minute demo with a salesman.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border border-steel-200">
+          <div class="font-display font-bold text-2xl text-signal-600">03</div>
+          <div class="mt-2 font-display font-bold text-lg text-steel-900">We tell you straight.</div>
+          <p class="mt-2 text-steel-700 text-sm">Pros. Cons. Who should buy it. Who should stay away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-steel-950 text-steel-300">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center h-9 w-9 rounded-md bg-white text-steel-900 font-display font-bold">D</span>
+            <span class="font-display font-bold text-lg text-white">Desk Work Dan</span>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed max-w-md">Honest software reviews for plumbers, roofers, mechanics, landscapers and the rest of us who'd rather be on the job than reading manuals.</p>
+        </div>
+        <div>
+          <div class="font-semibold text-white text-sm uppercase tracking-wide">Site</div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="#reviews" class="hover:text-white">Reviews</a></li>
+            <li><a href="#comparisons" class="hover:text-white">Comparisons</a></li>
+            <li><a href="about.html" class="hover:text-white">About The Mechanic</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold text-white text-sm uppercase tracking-wide">Fine Print</div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">Affiliate Disclosure</a></li>
+            <li><a href="#" class="hover:text-white">Privacy</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-steel-800 text-xs text-steel-500 flex flex-col sm:flex-row justify-between gap-2">
+        <div>&copy; <span id="year">2026</span> Desk Work Dan. All rights reserved.</div>
+        <div>Built plain and simple. No tracking circus.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Why Desk Work Dan exists: helping working businesses find software that actually works without overpaying or getting buried in Silicon Valley jargon." />
+  <title>About The Mechanic | Desk Work Dan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            steel: {
+              50: '#f5f7fa', 100: '#e4e9f0', 200: '#cbd4e0', 300: '#a4b3c7',
+              400: '#768aa6', 500: '#566c8b', 600: '#445672', 700: '#38465d',
+              800: '#2f3a4d', 900: '#1d2433', 950: '#11151f'
+            },
+            signal: {
+              50: '#fff7ed', 100: '#ffedd5', 500: '#f97316',
+              600: '#ea580c', 700: '#c2410c', 800: '#9a3412'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+            display: ['"Roboto Slab"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Roboto Slab', Georgia, serif; }
+  </style>
+</head>
+
+<body class="bg-white text-steel-900 antialiased">
+
+  <!-- Top affiliate disclosure strip -->
+  <div class="bg-steel-900 text-steel-100 text-xs sm:text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-center">
+      Some links on this site are affiliate links. If you buy through them, we may earn a small commission &mdash; at no extra cost to you.
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="border-b border-steel-200 bg-white sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <span class="inline-flex items-center justify-center h-9 w-9 rounded-md bg-steel-900 text-signal-500 font-display font-bold">D</span>
+        <span class="font-display font-bold text-lg sm:text-xl tracking-tight">Desk Work Dan</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="text-steel-700 hover:text-signal-600">Home</a>
+        <a href="index.html#reviews" class="text-steel-700 hover:text-signal-600">Reviews</a>
+        <a href="index.html#comparisons" class="text-steel-700 hover:text-signal-600">Comparisons</a>
+        <a href="about.html" class="text-steel-900 hover:text-signal-600">About The Mechanic</a>
+      </nav>
+
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-steel-300 text-steel-700 hover:bg-steel-50" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg id="iconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg id="iconClose" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileNav" class="hidden md:hidden border-t border-steel-200 bg-white">
+      <nav class="px-4 py-3 flex flex-col gap-1 text-base font-medium">
+        <a href="index.html" class="py-2 text-steel-700">Home</a>
+        <a href="index.html#reviews" class="py-2 text-steel-700">Reviews</a>
+        <a href="index.html#comparisons" class="py-2 text-steel-700">Comparisons</a>
+        <a href="about.html" class="py-2 text-steel-900">About The Mechanic</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-steel-50 to-white border-b border-steel-200">
+    <div class="max-w-3xl mx-auto px-4 py-14 sm:py-20">
+      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-signal-700 bg-signal-50 border border-signal-100 px-3 py-1 rounded-full">
+        <span class="h-1.5 w-1.5 rounded-full bg-signal-600"></span>
+        About The Mechanic
+      </span>
+      <h1 class="mt-4 font-display font-extrabold text-4xl sm:text-5xl leading-tight text-steel-900">
+        Software reviews for the rest of us.
+      </h1>
+      <p class="mt-5 text-lg sm:text-xl text-steel-700 leading-relaxed">
+        Desk Work Dan exists for one reason: to help regular working businesses find software that actually works &mdash; without overpaying or getting buried in Silicon Valley jargon.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission body -->
+  <section class="py-14 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 space-y-12">
+
+      <div>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-steel-900">Why this site exists</h2>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          Walk into any plumbing shop, roofing company, mechanic's garage, or landscaping outfit in America and you'll see the same thing: smart, hard-working people getting talked down to by software companies that don't understand their business.
+        </p>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          The pricing is confusing. The websites are full of buzzwords. The "free demos" are sales calls. And every review you find online is either written by an intern who never used the product, or by an "expert" pushing whatever pays the highest commission.
+        </p>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          We started Desk Work Dan because somebody needs to translate. The tools really can save you hours every week and thousands of dollars a year &mdash; if you pick the right one. We help you do that.
+        </p>
+      </div>
+
+      <!-- The promises -->
+      <div class="bg-steel-50 border border-steel-200 rounded-lg p-6 sm:p-8">
+        <h2 class="font-display font-bold text-2xl text-steel-900">The Desk Work Dan Promise</h2>
+        <p class="mt-2 text-steel-700">Four things we'll always do, and four things we'll never do.</p>
+
+        <div class="mt-6 grid sm:grid-cols-2 gap-6">
+          <div>
+            <div class="font-display font-bold text-lg text-steel-900 flex items-center gap-2">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              We will&hellip;
+            </div>
+            <ul class="mt-3 space-y-2 text-steel-700">
+              <li>&middot; Pay full price for every product we review.</li>
+              <li>&middot; Use it on real jobs for at least 30 days.</li>
+              <li>&middot; Tell you who shouldn't buy it.</li>
+              <li>&middot; Write everything in plain English.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-display font-bold text-lg text-steel-900 flex items-center gap-2">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-rose-100 text-rose-700">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </span>
+              We will not&hellip;
+            </div>
+            <ul class="mt-3 space-y-2 text-steel-700">
+              <li>&middot; Take payment to bump up a score.</li>
+              <li>&middot; Recommend a tool we wouldn't use ourselves.</li>
+              <li>&middot; Hide which links earn us money.</li>
+              <li>&middot; Use the words "synergy," "platform," or "leverage."</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Who is The Mechanic -->
+      <div>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-steel-900">Who is The Mechanic?</h2>
+        <div class="mt-6 flex flex-col sm:flex-row gap-6 items-start">
+          <div class="shrink-0">
+            <div class="h-24 w-24 rounded-md bg-steel-900 text-signal-500 font-display font-bold text-4xl flex items-center justify-center">M</div>
+          </div>
+          <div class="text-steel-700 text-lg leading-relaxed space-y-4">
+            <p>
+              The Mechanic is the persona behind every review on this site. Think of him as the buddy at the parts counter who has actually run a small business, dealt with stack of receipts at the end of the year, and wasted his own money on software that didn't work out.
+            </p>
+            <p>
+              He's spent the better part of two decades around shops, trucks, and back offices. He's been the guy answering the phone, the guy invoicing on Sunday night, and the guy explaining to dad why the new "system" is faster than the wall calendar.
+            </p>
+            <p>
+              When you read a review here, that's the voice you're getting. No marketing department. No "growth team." Just somebody who has lived the problem and has finally found a few tools worth recommending.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- How we make money -->
+      <div>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-steel-900">How we keep the lights on</h2>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          We're upfront about it: a lot of the links on this site are <strong>affiliate links</strong>. If you click through and end up buying a product, the company sometimes pays us a small commission. You don't pay a penny extra &mdash; the cost is the same whether you use our link or type the URL yourself.
+        </p>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          That's how a small site like this stays free, ad-free, and free of pop-ups. Just so we're crystal clear: <strong>commissions never change our recommendation.</strong> If a tool stinks, we say so &mdash; even if they're paying the highest rate in the industry. We'd rather lose a sale than lose your trust.
+        </p>
+      </div>
+
+      <!-- Who we help -->
+      <div>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-steel-900">Who this site is for</h2>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          You're in the right spot if you run any of these:
+        </p>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-steel-700">
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Plumbing or HVAC shops</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Roofing &amp; siding crews</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Auto repair garages</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Landscaping &amp; lawn care</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> General contractors &amp; handymen</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Cleaning services</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Main street retail shops</li>
+          <li class="flex items-start gap-2"><span class="text-signal-600 font-bold">&#10003;</span> Restaurants &amp; food trucks</li>
+        </ul>
+        <p class="mt-4 text-steel-700 text-lg leading-relaxed">
+          If you've got 1 to 50 employees, take phone calls from real customers, and would rather be doing the work than the paperwork &mdash; you're our people.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section class="bg-steel-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 py-12 sm:py-16 text-center">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl">Ready to find a tool that actually fits?</h2>
+      <p class="mt-3 text-steel-300 text-lg max-w-2xl mx-auto">Browse the latest reviews. We'll tell you what we'd buy with our own money &mdash; and what we'd run from.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="index.html#reviews" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-signal-500 hover:bg-signal-600 text-steel-950 font-bold transition">
+          See latest reviews
+          <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+        </a>
+        <a href="index.html#comparisons" class="inline-flex items-center justify-center px-6 py-3 rounded-md border-2 border-steel-700 hover:border-white text-white font-semibold transition">
+          Compare two tools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-steel-950 text-steel-300">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center h-9 w-9 rounded-md bg-white text-steel-900 font-display font-bold">D</span>
+            <span class="font-display font-bold text-lg text-white">Desk Work Dan</span>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed max-w-md">Honest software reviews for plumbers, roofers, mechanics, landscapers and the rest of us who'd rather be on the job than reading manuals.</p>
+        </div>
+        <div>
+          <div class="font-semibold text-white text-sm uppercase tracking-wide">Site</div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="index.html#reviews" class="hover:text-white">Reviews</a></li>
+            <li><a href="index.html#comparisons" class="hover:text-white">Comparisons</a></li>
+            <li><a href="about.html" class="hover:text-white">About The Mechanic</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold text-white text-sm uppercase tracking-wide">Fine Print</div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">Affiliate Disclosure</a></li>
+            <li><a href="#" class="hover:text-white">Privacy</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-steel-800 text-xs text-steel-500 flex flex-col sm:flex-row justify-between gap-2">
+        <div>&copy; <span id="year">2026</span> Desk Work Dan. All rights reserved.</div>
+        <div>Built plain and simple. No tracking circus.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
